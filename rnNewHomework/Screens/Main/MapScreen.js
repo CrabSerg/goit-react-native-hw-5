@@ -17,7 +17,7 @@ export const MapScreen = ({ route }) => {
         }}
         minZoomLevel={1}
       >
-        <Marker title="Ты здесь" coordinate={{ longitude, latitude }} />
+        <Marker title="Ти тут" coordinate={{ longitude, latitude }} />
       </MapView>
     </View>
   );

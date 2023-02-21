@@ -33,10 +33,11 @@ export const CommentsScreen = () => {
   const onSend = () => {
     if (!comment.trim()) {
       Alert.alert(`
-      Введите свой комментарий, пожалуйста`);
+      Введіть свій коментар, будь ласка`);
       return;
     }
-    Alert.alert(`Ваш комментарий успешно отправлен!`);
+    Alert.alert(`
+    Ваш коментар успішно надіслано!`);
     console.log(comment);
     setComment("");
     Keyboard.dismiss();
@@ -117,7 +118,7 @@ export const CommentsScreen = () => {
         <TextInput
           value={comment}
           style={styles.input}
-          placeholder="Комментировать..."
+          placeholder="Коментувати..."
           cursorColor={"#BDBDBD"}
           placeholderTextColor={"#BDBDBD"}
           onChangeText={commentHandler}

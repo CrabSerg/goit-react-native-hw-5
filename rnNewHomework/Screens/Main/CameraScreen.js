@@ -26,7 +26,7 @@ const CameraScreen = ({ navigation }) => {
     (async () => {
       const { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== "granted") {
-        Alert.alert("Не удалось определить местоположение");
+        Alert.alert("Не вдалося визначити місцезнаходження");
       }
 
       const location = await Location.getCurrentPositionAsync();
@@ -50,7 +50,7 @@ const CameraScreen = ({ navigation }) => {
 
   if (photo) {
     const savePhoto = () => {
-      navigation.navigate("Создать публикацию", { photo, location });
+      navigation.navigate("Створити публікацію", { photo, location });
     };
 
     return (
@@ -62,14 +62,14 @@ const CameraScreen = ({ navigation }) => {
               style={{ ...styles.button, marginRight: 30 }}
               onPress={savePhoto}
             >
-              <Text style={styles.textButton}>Сохранить</Text>
+              <Text style={styles.textButton}>Зберегти</Text>
             </TouchableOpacity>
           ) : null}
           <TouchableOpacity
             style={styles.button}
             onPress={() => setPhoto(null)}
           >
-            <Text style={styles.textButton}>Переснять</Text>
+            <Text style={styles.textButton}>Перезняти</Text>
           </TouchableOpacity>
         </View>
       </View>

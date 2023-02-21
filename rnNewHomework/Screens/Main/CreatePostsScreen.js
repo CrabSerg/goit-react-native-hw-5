@@ -47,10 +47,10 @@ export const CreatePostsScreen = ({ navigation, route }) => {
 
   const onPublish = () => {
     if (!title.trim() || !location) {
-      Alert.alert(`Все поля должны быть заполнены!`);
+      Alert.alert(`Усі поля мають бути заповнені!`);
       return;
     }
-    Alert.alert(`Ваша публикация прошла успешно`);
+    Alert.alert(`Ваша публікація пройшла успішно`);
 
     const newPost = {
       id: Date(),
@@ -65,14 +65,14 @@ export const CreatePostsScreen = ({ navigation, route }) => {
     setLocation("");
     setImage();
     Keyboard.dismiss();
-    navigation.navigate("Публикации", { newPost });
+    navigation.navigate("Публикації", { newPost });
   };
 
   const onDelete = () => {
     setTitle("");
     setLocation("");
     setImage();
-    Alert.alert(`Удаление прошло успешно`);
+    Alert.alert(`Вилучення пройшло успішно`);
     Keyboard.dismiss();
   };
 
@@ -155,7 +155,7 @@ export const CreatePostsScreen = ({ navigation, route }) => {
           )}
 
           <View style={styles.contantTitle}>
-            <Text style={styles.text}>Загрузите фото</Text>
+            <Text style={styles.text}>Завантажте фото</Text>
           </View>
           <View style={{ width: windowWidth - 32 }}>
             <TextInput
@@ -166,7 +166,7 @@ export const CreatePostsScreen = ({ navigation, route }) => {
               onFocus={() => setIsFocusedTitle(true)}
               onBlur={() => setIsFocusedTitle(false)}
               value={title}
-              placeholder="Название..."
+              placeholder="Назва..."
               cursorColor={"#BDBDBD"}
               placeholderTextColor={"#BDBDBD"}
               onChangeText={titleHandler}
@@ -183,14 +183,14 @@ export const CreatePostsScreen = ({ navigation, route }) => {
                 location ? `${location?.latitude}, ${location?.longitude}` : ""
               }
               textContentType={"location"}
-              placeholder="Местность..."
+              placeholder="Місцевість..."
               cursorColor={"#BDBDBD"}
               placeholderTextColor={"#BDBDBD"}
             ></TextInput>
             <Location
               style={styles.locationIcon}
               onPress={() =>
-                navigation.navigate("Карта", {
+                navigation.navigate("Мапа", {
                   location,
                 })
               }
@@ -210,7 +210,7 @@ export const CreatePostsScreen = ({ navigation, route }) => {
                 color: isDisabledPublish ? "#BDBDBD" : "#FFFFFF",
               }}
             >
-              Опубликовать
+              Опублікувати
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
