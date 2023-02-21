@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
+
 import {
   TouchableOpacity,
   StyleSheet,
@@ -127,7 +128,7 @@ export const ProfileScreen = ({ navigation }) => {
                 <View style={styles.row}>
                   <TouchableOpacity
                     style={styles.statisticWrap}
-                    onPress={() => navigation.navigate("Коментарі")}
+                    onPress={() => navigation.navigate("Комментарии")}
                   >
                     <Message />
                     <Text style={styles.statisticText}>{item.comments}</Text>
@@ -137,10 +138,14 @@ export const ProfileScreen = ({ navigation }) => {
                     <Text style={styles.statisticText}>{item.likes}</Text>
                   </View>
                 </View>
-                <View style={styles.statisticWrap}>
+
+                <TouchableOpacity
+                  style={styles.statisticWrap}
+                  onPress={() => navigation.navigate("Карта")}
+                >
                   <Location />
                   <Text style={styles.statisticText}>{item.location}</Text>
-                </View>
+                </TouchableOpacity>
               </View>
             </View>
           )}

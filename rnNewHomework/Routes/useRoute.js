@@ -6,6 +6,8 @@ import { MapScreen } from "../Screens/Main/MapScreen";
 import { Home } from "../Screens/Main/Home";
 import RegistrationScreen from "./../Screens/Auth/RegistrationScreen/RegistrationScreen";
 import LoginScreen from "./../Screens/Auth/LoginScreen/LoginScreen";
+import { CreatePostsScreen } from "./../Screens/Main/CreatePostsScreen";
+import CameraScreen from "./../Screens/Main/CameraScreen";
 
 const AuthStack = createStackNavigator();
 const MainStack = createStackNavigator();
@@ -29,8 +31,21 @@ export const useRoute = (isLogin) => {
       ></MainStack.Screen>
       <MainStack.Screen
         options={{ headerShown: false }}
-        name="Map"
+        name="Maпа"
         component={MapScreen}
+      ></MainStack.Screen>
+      <MainStack.Screen
+        options={{ headerShown: true, headerTitleAlign: "center" }}
+        name="Створити публікацію"
+        Create
+        Post
+        component={CreatePostsScreen}
+      ></MainStack.Screen>
+
+      <MainStack.Screen
+        options={{ headerShown: true, headerTitleAlign: "center" }}
+        name="Камера"
+        component={CameraScreen}
       ></MainStack.Screen>
     </MainStack.Navigator>
   ) : (

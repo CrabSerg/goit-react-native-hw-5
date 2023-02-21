@@ -17,7 +17,7 @@ import Message from "../../assets/images/postImg/message.svg";
 import Like from "../../assets/images/postImg/like.svg";
 import Location from "../../assets/images/postImg/location.svg";
 
-export const PostsScreen = ({ navigation }) => {
+export const PostsScreen = ({ navigation, route }) => {
   const [windowWidth, setWindowWidth] = useState(
     Dimensions.get("window").width
   );
@@ -96,10 +96,14 @@ export const PostsScreen = ({ navigation }) => {
                   <Text style={styles.textStatistic}>{item.likes}</Text>
                 </View>
               </View>
-              <View style={styles.wrap}>
+
+              <TouchableOpacity
+                style={styles.wrap}
+                onPress={() => navigation.navigate("Карта")}
+              >
                 <Location />
-                <Text style={styles.textStatistic}>{item.location}</Text>
-              </View>
+                <Text style={styles.cardText}>{item.location}</Text>
+              </TouchableOpacity>
             </View>
           </View>
         )}
