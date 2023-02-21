@@ -65,7 +65,7 @@ export const CreatePostsScreen = ({ navigation, route }) => {
     setLocation("");
     setImage();
     Keyboard.dismiss();
-    navigation.navigate("Публикації", { newPost });
+    navigation.navigate("Публікації", { newPost });
   };
 
   const onDelete = () => {

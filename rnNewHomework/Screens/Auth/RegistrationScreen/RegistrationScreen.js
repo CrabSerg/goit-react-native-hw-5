@@ -121,7 +121,7 @@ const RegistrationScreen = ({ navigation }) => {
                   <Add />
                 </TouchableOpacity>
                 <View style={{ width: phoneWidth - 16 * 2 }}>
-                  <Text style={styles.title}>Реєстрація</Text>
+                  <Text style={styles.title}>Регістрація</Text>
                   <TextInput
                     style={{
                       ...styles.input,

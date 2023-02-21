@@ -36,8 +36,7 @@ export const CommentsScreen = () => {
       Введіть свій коментар, будь ласка`);
       return;
     }
-    Alert.alert(`
-    Ваш коментар успішно надіслано!`);
+    Alert.alert(`Ваш коментар успішно надіслано!`);
     console.log(comment);
     setComment("");
     Keyboard.dismiss();

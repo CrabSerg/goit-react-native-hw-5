@@ -86,7 +86,7 @@ export const PostsScreen = ({ navigation, route }) => {
               <View style={styles.userCardInformation}>
                 <TouchableOpacity
                   style={styles.wrap}
-                  onPress={() => navigation.navigate("Комментарі")}
+                  onPress={() => navigation.navigate("Коментарі")}
                 >
                   <Message />
                   <Text style={styles.textStatistic}>{item.comments}</Text>

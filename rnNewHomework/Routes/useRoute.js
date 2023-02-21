@@ -26,12 +26,12 @@ export const useRoute = (isLogin) => {
           headerTitleStyle: { color: "#212121", fontSize: 17 },
           headerTitleAlign: "center",
         }}
-        name="Коментарі"
+        name="Комментарі"
         component={CommentsScreen}
       ></MainStack.Screen>
       <MainStack.Screen
         options={{ headerShown: false }}
-        name="Maпа"
+        name="Мапа"
         component={MapScreen}
       ></MainStack.Screen>
       <MainStack.Screen

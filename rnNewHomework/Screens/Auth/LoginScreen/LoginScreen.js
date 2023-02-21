@@ -146,7 +146,7 @@ const LoginScreen = ({ navigation }) => {
                     }
                   >
                     <Text style={styles.isPasswordShow}>
-                      {isPasswordHidden ? "Показати" : "Приховати"}
+                      {isPasswordHidden ? "Показати" : "Сховати"}
                     </Text>
                   </TouchableOpacity>
                   <TouchableOpacity style={styles.button} onPress={onLogin}>
